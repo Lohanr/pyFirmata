@@ -29,8 +29,8 @@ Usage
 
 Basic usage::
 
-    >>> from pyfirmata import Arduino, util
-    >>> board = Arduino('/dev/tty.usbserial-A6008rIF')
+    >>> from pyfirmata import Arduino, util # This is to import the PyFirmata(So that you can use it)
+    >>> board = Arduino('/dev/tty.usbserial-A6008rIF') # '/dev/tty.usbserial-A6008rIF' is the arduino's name(or serial number)
     >>> board.digital[13].write(1)
 
 To use analog ports, it is probably handy to start an iterator thread. Otherwise the board will keep sending data to your serial, until it overflows::
